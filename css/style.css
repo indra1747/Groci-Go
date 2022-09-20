@@ -32,6 +32,20 @@ body{
 
 }
 
+.btn{
+    border: 1px solid;
+    color: black;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    font-size: 1.2rem;
+    display: block;
+    text-align: center;
+}
+
+#menu-btn{
+    display:none;
+}
+
 .logo{
     font-size: 1.8em;
     font-weight: bold;
@@ -49,7 +63,7 @@ body{
 }
 
 .header .icons div{
-    border: 1px solid ;
+    border: 0px solid ;
     border-radius: 0.5rem;
     height: 3rem;
     width: 3rem;
@@ -58,7 +72,23 @@ body{
     color: black;
     padding-top: 1rem;
     padding-left: 1rem;
+    cursor: pointer;
 
+}
+
+.header .icons div:hover{
+    color: #fff;
+    background-color: green;
+}
+
+.header .shopping-cart.active{
+    right: 2rem;
+    transition: 0s linear;
+}
+
+.header .navbar.active{
+    right: 2rem;
+    transition: 0s linear;
 }
 
 
@@ -66,9 +96,9 @@ body{
     border: 0px solid;
     position: absolute;
     top: 110%;
-    right: 2rem;
+    right: -110%;
     padding: 1rem;
-     box-shadow:0 .1rem 1rem rgba(0, 0, 0, 0.1); 
+    box-shadow:0 .1rem 1rem rgba(0, 0, 0, 0.1); 
     border-radius: 0.5rem;
     width: 35rem;
     background: #fff;
@@ -100,7 +130,7 @@ body{
 }
 
 .header .shopping-cart .content h3{
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     padding-bottom: 0.4rem;
 }
 .header .shopping-cart .content span{
@@ -117,21 +147,119 @@ body{
 
 .header .shopping-cart .btn{
 
-    border: 1px solid;
-    color: black;
-    padding: 1rem;
-    border-radius: 0.5rem;
-    font-size: 1.2rem;
-    display: block;
-    text-align: center;
-    margin: 1rem;
-     
+    margin: 1rem 0;
+    text-align: block;
 
 }
 
-.header .shopping-cart .btn:hover{
+.btn:hover{
     background: green;
     color: white;
     cursor: pointer;
     
+}
+
+.header .login-form{
+    border: 1px solid;
+    position: absolute;
+    top: 110%;
+    right: -110%;
+    width: 30rem;
+    box-shadow:0 .1rem 1rem rgba(0, 0, 0, 0.1); 
+    padding: 2rem;
+    border-radius: 00.5rem;
+    background: #fff;
+    text-align: center;
+    height: 27rem;
+}
+
+.header .login-form h3{
+    font-size: 2rem;
+    color: black;
+    margin: 1rem 0;
+}
+
+.header .login-form .box{
+    width: 87%;
+    border: 1px solid;
+    border-radius: 0.5rem;
+    background: #eee;
+    font-size: 1.5rem;
+    color: black;
+    margin: 0.7rem -0.4rem;
+    padding: 1rem;
+
+}
+
+.header .login-form p{
+    font-size: 1.3rem;
+    margin: 1rem 0;
+}
+
+.header .login-form .btn{
+    display: inline-block;
+    width: 10rem;
+    transform: translateY(0.3rem);  
+}
+
+.header .login-form.active{
+    right: 2rem;
+    transition: 0s linear;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Media Queries */
+
+@media (max-width:991px ){
+     html{
+        font-size: 55%;
+     }
+     .header{
+        padding: 2rem;
+     }
+}
+
+@media (max-width: 768px){
+    .header .navbar{
+        position: absolute;
+        top: 110%;
+        right: -110%;
+        width: 30rem;
+        box-shadow:0 .1rem 1rem rgba(0, 0, 0, 0.1); 
+        border-radius: 00.5rem;
+        background: #fff;
+    }
+
+    #menu-btn{
+        display:inline-block;
+    }
+
+    .header .navbar a{
+        font-size: 1.5rem;
+        margin: 2rem 2.5rem;
+        display: block;
+    }
+
+
+}
+
+
+@media (max-width: 450px){
+     html{
+        font-size: 50%;
+     }
+     .header{
+        padding: 2rem;
+     }
 }
