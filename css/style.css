@@ -43,6 +43,11 @@ body {
   background-color: #eee;
 }
 
+.btn:hover{
+  background-color: green;
+  color: #fff;
+}
+
 .heading {
   text-align: center;
   padding: 2rem 0;
@@ -95,9 +100,49 @@ body {
   background-color: green;
 }
 
-.header .shopping-cart.active {
-  right: 2rem;
-  transition: 0s linear;
+/* Header Search bar */
+
+.header .search-form
+{
+    border: 0px solid;
+    position: absolute;
+    top: 110%;
+    right: -110%;
+    width: 40rem;
+    height: 4rem;
+    background-color: #fff;
+    border-radius: 0.5rem;
+    overflow:hidden;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+}
+
+.header .search-form.active
+{
+    right: 2rem;
+    transition: .4s linear;
+}
+
+.header .search-form input{
+    height:100%;
+    width:100%;
+    background: none;
+    text-transform: none;
+    font-size: 1.6rem;
+    color: black;
+    padding:1.5rem;
+}
+
+.header .search-form label
+{
+    font-size: 2rem;
+    padding:0 1.5rem;
+    cursor: pointer;
+}
+
+.header .search-form label:hover{
+    color:green;         
 }
 
 .header .navbar.active {
@@ -105,68 +150,83 @@ body {
   transition: 0s linear;
 }
 
-.header .shopping-cart {
-  border: 0px solid;
-  position: absolute;
-  top: 110%;
-  right: -110%;
-  padding: 1rem;
-  box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
-  border-radius: 0.5rem;
-  width: 35rem;
-  background: #fff;
+/* Header Shopping-cart */
+
+.header .shopping-cart
+{
+    border: 0px solid;
+    position: absolute;
+    top: 110%;
+    right: -110%;
+    padding: 1rem;
+    border-radius: .5rem;
+    box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1) ;
+    width: 35rem;
+    height: 40rem;
+    background: #fff;
 }
 
-.header .shopping-cart .box {
-  display: flex;
-  align-items: center;
-  gap: 4rem;
-  /*position: relative
-    margin 1px 0;*/
+.header .shopping-cart .box
+{
+    border: 0x solid blue;
+    display:flex;
+    align-items: center;
+    gap: 4rem;
 }
 
-.header .shopping-cart .box img {
-  height: 10rem;
+.header .shopping-cart .box img{
+    height: 10rem;
 }
 
-.header .shopping-cart .fa-trash {
-  font-size: 2rem;
-  position: absolute;
-  right: 3rem;
-  cursor: pointer;
-  color: #666;
+
+.header .shopping-cart .box .fa-trash
+{
+    font-size: 2rem;
+    position: absolute;
+    right: 3rem;
+    cursor: pointer;
+    color: #666;
 }
 
-.header .shopping-cart .fa-trash:hover {
-  color: green;
+.header .shopping-cart .box .fa-trash:hover{
+    color: green;
 }
 
-.header .shopping-cart .content h3 {
-  font-size: 1.6rem;
-  padding-bottom: 0.4rem;
-}
-.header .shopping-cart .content span {
-  font-size: 1.2rem;
-  padding-right: 0.9rem;
-  padding-left: 0.4rem;
+.header .shopping-cart .box .content h3
+{
+    color: black;
+    font-size: 1.7rem;
+    padding-bottom: 0.4rem;
 }
 
-.header .shopping-cart .total {
-  font-size: 2.2rem;
+.header .shopping-cart .box .content span
+{
+    color: #666;
+    font-size: 1.3rem;
+    padding-right: 0.9rem;
+    padding-left: 0.4rem;
+}
+
+.header .shopping-cart .total
+{
+    font-size: 2.1rem;
+    padding-top: 1rem;
+    text-align: center;
+    color: black;
+}
+
+.header .shopping-cart .btn{
+  display: block;
   text-align: center;
-  padding-top: 2rem;
 }
 
-.header .shopping-cart .btn {
-  margin: 1rem 0;
-  text-align: block;
+.header .shopping-cart.active
+{
+    right:2rem;
+    transition: .6s linear;
 }
 
-.btn:hover {
-  background: green;
-  color: white;
-  cursor: pointer;
-}
+/* Header Login Form  */
 
 .header .login-form {
   border: 1px solid;
@@ -179,7 +239,7 @@ body {
   border-radius: 00.5rem;
   background: #fff;
   text-align: center;
-  height: 27rem;
+  height: 30rem;
 }
 
 .header .login-form h3 {
@@ -204,10 +264,9 @@ body {
   margin: 1rem 0;
 }
 
-.header .login-form .btn {
-  display: inline-block;
-  width: 10rem;
-  transform: translateY(0.3rem);
+.header .login-form .btn{
+  margin-bottom: 3rem;
+  display:inline-block;
 }
 
 .header .login-form.active {
@@ -218,6 +277,8 @@ body {
 section {
   padding: 2rem 9%;
 }
+
+/* Banner Section */
 
 .banner {
   display: flex;
@@ -436,6 +497,84 @@ section {
   color: #666;
   line-height: 1.8;
 }
+
+/* blog section */
+
+.blog .box-container{
+  border: 0px solid;
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(26rem,1fr));
+  gap: 1.5rem;
+  padding: 1rem 0;
+}
+
+.blog .box-container .container{
+  overflow: hidden;
+  border-radius: .5rem;
+  box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+  background: #fff;
+}
+
+.blog .box-container .container img{
+    height: 25rem;
+    width: 100%;
+    object-fit: cover;
+}
+
+.blog .box-container .container .content{
+    border: 0px solid;
+    padding: 2rem;
+}
+
+.blog .box-container .container .content .icons{
+    border: 0px solid;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 1.5rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #666;
+  }
+
+  .blog .box-container .container .content .icons a{
+    color: #666;
+    font-size: 1.4rem;
+  }
+
+  .blog .box-container .container .content .icons a:hover{
+    color: black;
+  }
+
+  .blog .box-container .container .content .icons a i{
+    color: green;
+    padding-right: .5rem;
+  }
+
+  .blog .box-container .container .content h3{
+    color: black;
+    /* line-height: 1.8; */
+    padding-right: .5rem 0;
+    font-size: 2.2rem;
+  }
+  
+  .blog .box-container .container .content p{
+    color: #666;
+    line-height: 1.8;
+    padding: 1rem 0;
+    font-size: 1.4rem;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* Media Queries */
